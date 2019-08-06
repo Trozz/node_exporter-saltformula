@@ -1,4 +1,4 @@
-# node
+# node exporter
 
 This formula installs [Node Exporter](https://github.com/prometheus/node_exporter).
 
