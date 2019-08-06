@@ -3,7 +3,9 @@ sudo: required
 language: python
 
 before_install:
-- python -c 'import urllib; print urllib.urlopen("https://bootstrap.saltstack.com").read()' > bootstrap-salt.sh
+- sudo apt-get update -q
+- sudo apt-get install -y curl
+- curl -o bootstrap-salt.sh -L https://bootstrap.saltstack.com
 - sudo sh bootstrap-salt.sh git develop
 
 install:
