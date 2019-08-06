@@ -1,0 +1,34 @@
+# Install from GitHub with checksum and configuration:
+node_exporter:
+  version: 0.18.1
+  checksum: b2503fd932f85f4e5baf161268854bf5d22001869b84f00fd2d1f57b51b72424
+  config:
+    listen-address: ':9100'
+    collectors:
+      - filesystem
+      - netdev
+      - cpu
+      - diskstats
+      - mdadm
+      - loadavg
+      - time
+      - uname
+      - logind
+
+
+# Install from GitHub without checksum:
+node:
+  version: 0.18.1
+  checksum: ignore
+  config:
+    listen-address: ':9100'
+    collectors:
+      - filesystem
+      - netdev
+      - cpu
+      - diskstats
+      - mdadm
+      - loadavg
+      - time
+      - uname
+      - logind
